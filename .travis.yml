@@ -16,4 +16,9 @@ notifications:
 # HipChat
 # Sqwiggle
 # Slack
-# And even Webhooks !!!
+# And even Webhooks !!! (Including to Zappier, IFTTT, or your own)
+
+# You can also install desktop software to view build statuses:
+
+# CCMenu - for OS X
+# CCTray - for Windows
