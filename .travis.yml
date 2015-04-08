@@ -1,5 +1,19 @@
 language: node_js
 
-# You can write comments
 node_js:
   - "0.10"
+
+# This will send build results to ronen
+notifications:
+  email:
+    - ronen@lavaina.com
+
+# You can also send out build notifications to:
+
+# IRC
+# Campfire
+# Flowdock
+# HipChat
+# Sqwiggle
+# Slack
+# And even Webhooks !!!
