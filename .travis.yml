@@ -18,11 +18,15 @@ deploy:
     access_key_id: "YOUR AWS ACCESS KEY"
     secret_access_key: "YOUR AWS SECRET KEY"
     bucket: "S3 Bucket"
-    file: "FILE TO UPLOAD"
+    local_dir: build
+    upload-dir: travis-builds
+    # file: "FILE TO UPLOAD" # Or only file to upload
     skip_cleanup: true
     on:
       # An example of deploying automatically to prod env when updating release branch
       branch: release
       condition: $MY_ENV = super_awesome
+
+# You also have before_deploy and after_deploy steps
 
 # Note: pull request builds skip deployment step altogether.
