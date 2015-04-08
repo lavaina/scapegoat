@@ -1,5 +1,30 @@
 language: node_js
+
+# You can write comments
 node_js:
   - "0.11"
   - "0.10"
 
+# Install prerequisites or dependencies such as apt-get here
+before_install:
+  # You can specify more than one command
+  - git submodule init
+  - git submodule update
+
+# Or only one one the same line
+install: npm install # This is the default install command for node builds
+
+before_script:
+  - echo Install prerequisites or dependencies such as apt-get here
+
+# All commands must exit with code 0 on success. Anything else is considered failure.
+script: npm test # This is the default script command for node builds
+
+after_success:
+  - echo after_success
+
+after_failure:
+  - echo after_failure
+
+after_script:
+  - echo after_script
