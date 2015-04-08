@@ -3,9 +3,3 @@ language: node_js
 # You can write comments
 node_js:
   - "0.10"
-
-# whitelist
-branches:
-  only:
-    - master
-    - devel
