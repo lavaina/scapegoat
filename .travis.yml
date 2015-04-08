@@ -9,3 +9,7 @@ branches:
   only:
     - master
     - devel
+
+services:
+  - mongodb
+  - rabbitmq
