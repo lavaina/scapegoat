@@ -6,7 +6,7 @@ node_js:
 # This will send build results to ronen
 notifications:
   email:
-    - ronen@lavaina.com
+    - dev@lavaina.com
 
 # You can also send out build notifications to:
 
