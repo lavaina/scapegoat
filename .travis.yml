@@ -3,22 +3,26 @@ language: node_js
 node_js:
   - "0.10"
 
-# This will send build results to ronen
-notifications:
-  email:
-    - dev@lavaina.com
+# Travis supports all major cloud sotrage providers and PaaS providers
 
-# You can also send out build notifications to:
+deploy:
+  - provider: nodejitsu
+    user: ...
+    api_key: ...
+    on:
+      # An example of deploying automatically to staging env when updating stage branch
+      branch: staging
+      node: 0.11
 
-# IRC
-# Campfire
-# Flowdock
-# HipChat
-# Sqwiggle
-# Slack
-# And even Webhooks !!! (Including to Zappier, IFTTT, or your own)
+  - provider: s3
+    access_key_id: "YOUR AWS ACCESS KEY"
+    secret_access_key: "YOUR AWS SECRET KEY"
+    bucket: "S3 Bucket"
+    file: "FILE TO UPLOAD"
+    skip_cleanup: true
+    on:
+      # An example of deploying automatically to prod env when updating release branch
+      branch: release
+      condition: $MY_ENV = super_awesome
 
-# You can also install desktop software to view build statuses:
-
-# CCMenu - for OS X
-# CCTray - for Windows
+# Note: pull request builds skip deployment step altogether.
