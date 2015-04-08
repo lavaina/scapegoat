@@ -2,4 +2,12 @@ language: node_js
 
 # You can write comments
 node_js:
-  - "0.10"
+  - "0.11"
+
+install:
+  - export MY_ENV_VAR=1
+  - ./bin/install-dependencies.sh
+
+script:
+  - echo $MY_ENV_VAR
+  - ./bin/run-tests.sh
