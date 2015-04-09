@@ -11,3 +11,4 @@ install:
 script:
   - echo $MY_ENV_VAR
   - ./bin/run-tests.sh
+# Just a comment
